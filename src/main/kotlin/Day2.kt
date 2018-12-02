@@ -23,9 +23,7 @@ fun findChecksum(lines: List<String>): Int {
     for (line in lines) {
         val letterMap = mutableMapOf<Char, Int>()
         for (letter in line) {
-            letterMap.compute(letter) { _, v ->
-                if (v == null) 1 else v + 1
-            }
+            letterMap.merge(letter, 1, Int::plus)
         }
         idList.add(letterMap.values.toSet())
     }
