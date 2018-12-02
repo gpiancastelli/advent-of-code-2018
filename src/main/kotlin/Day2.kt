@@ -36,7 +36,7 @@ fun findChecksum(lines: List<String>): Int {
 
 fun findCommonLetters(lines: List<String>): String? {
     for (i in 0 until lines.size) {
-        for (j in i until lines.size) {
+        for (j in i + 1 until lines.size) {
             val id1 = lines[i]
             val id2 = lines[j]
             if (id1.length != id2.length) {
