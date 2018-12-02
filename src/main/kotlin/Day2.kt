@@ -28,10 +28,7 @@ fun findChecksum(lines: List<String>): Int {
         idList.add(letterMap.values.toSet())
     }
 
-    val repetitionsOfTwo = idList.filter { 2 in it }
-    val repetitionsOfThree = idList.filter { 3 in it }
-
-    return repetitionsOfTwo.size * repetitionsOfThree.size
+    return idList.count { 2 in it} * idList.count {3 in it}
 }
 
 fun findCommonLetters(lines: List<String>): String? {
