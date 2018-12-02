@@ -7,7 +7,7 @@ fun main(args: Array<String>) {
     val lines = inputFile.readLines()
 
     // solve first part
-    val checksum = findChecksum(lines)
+    val checksum = calculateChecksum(lines)
     // result: 4920
     println(checksum)
 
@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
     println(letters)
 }
 
-fun findChecksum(lines: List<String>): Int {
+fun calculateChecksum(lines: List<String>): Int {
     val idList = mutableListOf<Set<Int>>()
 
     for (line in lines) {
