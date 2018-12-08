@@ -46,7 +46,7 @@ fun createGuardMap(lines: List<String>): MutableMap<Int, IntArray> {
             }
         } else {
             lastGuardId = """\d+""".toRegex().find(message)!!.value.toInt()
-            guards.putIfAbsent(lastGuardId, IntArray(60) { 0 })
+            guards.putIfAbsent(lastGuardId, IntArray(60))
         }
     }
     return guards
