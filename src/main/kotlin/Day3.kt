@@ -46,8 +46,8 @@ class Claim(val id: Int, top: Int, left: Int, width: Int, height: Int) {
     val inches = mutableListOf<Pair<Int, Int>>()
 
     init {
-        for (i in top..(top + width - 1)) {
-            for (j in left..(left + height - 1)) {
+        for (i in top until top + width) {
+            for (j in left until left + height) {
                 inches.add(i to j)
             }
         }
