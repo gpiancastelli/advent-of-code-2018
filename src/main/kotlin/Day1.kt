@@ -1,11 +1,9 @@
-package aoc2018.day1
+package aoc2018
 
-import java.io.File
-import java.nio.file.Files
+import aoc2018.util.readLines
 
 fun main(args: Array<String>) {
-    val inputFile = File(ClassLoader.getSystemResource("input1.txt").file)
-    val lines = Files.readAllLines(inputFile.toPath())
+    val lines = readLines("input1.txt")
 
     val frequencyChanges = lines.map { it.toInt() }
 

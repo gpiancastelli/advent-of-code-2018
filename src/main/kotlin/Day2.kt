@@ -1,10 +1,9 @@
-package aoc2018.day2
+package aoc2018
 
-import java.io.File
+import aoc2018.util.readLines
 
 fun main(args: Array<String>) {
-    val inputFile = File(ClassLoader.getSystemResource("input2.txt").file)
-    val lines = inputFile.readLines()
+    val lines = readLines("input2.txt")
 
     // solve first part
     val checksum = calculateChecksum(lines)

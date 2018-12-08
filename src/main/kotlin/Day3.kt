@@ -1,10 +1,9 @@
-package aoc2018.day3
+package aoc2018
 
-import java.io.File
+import aoc2018.util.readLines
 
 fun main(args: Array<String>) {
-    val inputFile = File(ClassLoader.getSystemResource("input3.txt").file)
-    val lines = inputFile.readLines()
+    val lines = readLines("input3.txt")
 
     val claimList = createClaimList(lines)
     val overlappingInchesMap = createOverlappingInchesMap(claimList)

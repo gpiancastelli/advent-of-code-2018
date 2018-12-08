@@ -1,10 +1,9 @@
 package aoc2018
 
-import java.io.File
+import aoc2018.util.readLines
 
 fun main(args: Array<String>) {
-    val inputFile = File(ClassLoader.getSystemResource("input4.txt").file)
-    val lines = inputFile.readLines().sorted()
+    val lines = readLines("input4.txt").sorted()
 
     val guards = createGuardMap(lines)
 
