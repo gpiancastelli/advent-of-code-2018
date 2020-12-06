@@ -40,13 +40,13 @@ fun parseNode(input: MutableList<Int>): Node {
         val child = parseNode(input)
         children.add(child)
     }
-    val metadata = input.removeSlice(0 until metadataCount)
+    val metadata = input.removeFirstUntil(metadataCount)
     return Node(metadata, children)
 }
 
-fun <T> MutableList<T>.removeSlice(range: IntRange): List<T> {
-    val slice = this.slice(range)
-    for (i in range) {
+fun <T> MutableList<T>.removeFirstUntil(end: Int): List<T> {
+    val slice = this.slice(0 until end)
+    repeat(end) {
         this.removeAt(0)
     }
     return slice
